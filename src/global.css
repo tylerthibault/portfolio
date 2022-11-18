@@ -1,0 +1,7 @@
+button, .btn {
+    @apply border shadow rounded-full px-5;
+}
+
+button:hover, .btn:hover {
+    @apply bg-secondary-light duration-300;
+}
