@@ -7,12 +7,11 @@ import Forward from '../img/svg/forward.svg'
 import Backward from '../img/svg/backward.svg'
 
 function Hero(props) {
-    const {windowPos} = props
+    const { windowPos } = props
     const [allSayings, setAllSaying] = useState([
         "Christian",
         "Husband",
         "Father",
-        "Son",
         "Life Long Learner",
         "Maker",
         "Web Developer",
@@ -52,8 +51,8 @@ function Hero(props) {
     }
 
     const style = () => {
-        if (windowPos > 100){
-            return 'm-10 mt-44 rounded-xl shadow-xl shadow-black/75 duration-300 pt-24'
+        if (windowPos > 100) {
+            return 'mx-3 md:mx-10 mt-44 rounded-xl shadow-xl shadow-black/75 duration-700 pt-24'
         } else {
             return 'h-screen'
         }
@@ -61,12 +60,12 @@ function Hero(props) {
 
 
     return (
-        <div className={' bg-secondary-light grid grid-cols-2 relative ' + style()}>
+        <div className={' bg-secondary-light flex flex-col-reverse md:grid grid-cols-2 relative ' + style()}>
             <div className='h-full w-full flex justify-left items-end'>
                 <img src={HalfNHalf} alt="me" className='w-[50em]' />
             </div>
             <div className='h-full w-full flex flex-col justify-center items-start'>
-                <div className='flex gap-3'>
+                <div className='flex gap-3 w-full'>
                     <div className='absolute top-5 left-5'>
                         {
                             showingControls ?
@@ -77,22 +76,25 @@ function Hero(props) {
                     </div>
                     {
                         showingControls &&
-                        <>
-                            <img className='w-9 cursor-pointer' src={Backward} alt="forward" onClick={() => updateSpeedHandler(50)} />
-                            {
-                                showing ?
-                                    <img onClick={() => setShowing(!showing)} className='w-4 cursor-pointer' src={Pause} alt="pause" />
-                                    :
-                                    <img onClick={() => setShowing(!showing)} className='w-4 cursor-pointer' src={Play} alt="pause" />
-                            }
-                            <img className='w-9 cursor-pointer' src={Forward} alt="forward" onClick={() => updateSpeedHandler(-50)} />
-                            <input className='rounded-full text-center w-fit' type="number" name="currentSpeedInput" id="currentSpeedInput" value={currentSpeed} onChange={(e) => setCurrentSpeed(e.target.value)} />
-                        </>
+                        <div className='flex flex-col justify-center items-center w-full'>
+                            <div className='flex justify-center'>
+                                <img className='w-9 cursor-pointer' src={Backward} alt="forward" onClick={() => updateSpeedHandler(50)} />
+                                {
+                                    showing ?
+                                        <img onClick={() => setShowing(!showing)} className='w-4 cursor-pointer' src={Pause} alt="pause" />
+                                        :
+                                        <img onClick={() => setShowing(!showing)} className='w-4 cursor-pointer' src={Play} alt="pause" />
+                                }
+                                <img className='w-9 cursor-pointer' src={Forward} alt="forward" onClick={() => updateSpeedHandler(-50)} />
+                            </div>
+                                <label className='text-white' htmlFor="currentSpeedInput">Speed</label>
+                                <input className='rounded-full text-center w-fit' type="number" name="currentSpeedInput" id="currentSpeedInput" value={currentSpeed} onChange={(e) => setCurrentSpeed(e.target.value)} />
+                        </div>
                     }
                 </div>
-                <div className='w-96 flex flex-col items-center h-48'>
-                    <h2 className='text-4xl text-white uppercase'>I am a</h2>
-                    <p className='text-6xl text-white uppercase'>{saying}</p>
+                <div className='w-full flex flex-col items-center h-48'>
+                    <h2 className='text-2xl md:text-4xl text-white uppercase'>I am a</h2>
+                    <p className='text-4xl md:text-6xl text-white uppercase'>{saying}</p>
                     <div className='flex gap-3 mt-auto'>
                         <button className='bg-accent text-white'>Contact Me</button>
                         <button className='bg-white hover:bg-white'>Resume</button>

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import AboutMeWidget from '../components/AboutMeWidget'
 import Hero from '../components/Hero'
 import Lorem from '../components/Lorem'
 import Navbar from '../components/Navbar'
+import TechnologyWidget from '../components/TechnologyWidget'
 
 function Landing() {
   const [windowPos, setWindowPos] = useState()
@@ -18,11 +20,13 @@ function Landing() {
 
   return (
     <div>
-        <Navbar />
         <Hero 
         windowPos={windowPos}
         />
-        <Lorem />
+        <Navbar />
+        <AboutMeWidget />
+        <TechnologyWidget />
+        {/* <Lorem /> */}
     </div>
   )
 }
