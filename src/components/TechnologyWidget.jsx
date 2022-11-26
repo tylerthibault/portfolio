@@ -40,7 +40,7 @@ function TechnologyWidget() {
                     textStyle="text-white md:text-black"
                 />
             </div>
-            <div className='md:grid grid-cols-12 ml-10'>
+            <div className='flex flex-col md:grid grid-cols-12 md:ml-10'>
                 <div className='md:hidden'>
                     <label htmlFor="tech"></label>
                     <select className='uppercase rounded-md shadow-md shadow-black px-3 text-center' name="tech" id="tech" onChange={techHandler}>
@@ -53,7 +53,7 @@ function TechnologyWidget() {
                 <div className='hidden md:block'>
                     {desktopStyle()}
                 </div>
-                <div className='col-span-11 flex flex-col md:grid grid-cols-6 gap-10 md:bg-secondary-light p-4 w-full rounded-tl-lg rounded-bl-lg shadow md:border-t-2 md:border-l-2 md:border-b-2 md:border-black'>
+                <div className='col-span-11 flex flex-col md:grid grid-cols-6 gap-10 md:bg-secondary-light p-4 w-full rounded-tl-lg rounded-bl-lg md:shadow md:border-t-2 md:border-l-2 md:border-b-2 md:border-black'>
                     <div className='bg-white grid grid-cols-3 gap-x-2 gap-y-5 p-3 mt-5 rounded-lg shadow-lg shadow-black justify-items-center col-span-2 h-[15em] overflow-y-auto'>
                         {
                             currentTech.map((item, idx) => {

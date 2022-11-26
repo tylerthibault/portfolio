@@ -58,6 +58,14 @@ function Hero(props) {
         }
     }
 
+    const contactMeHandler = () => {
+        const anchor = document.querySelector(`#contactme`)
+        anchor.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        })
+    }
+
 
     return (
         <div className={'bg-secondary-light flex flex-col-reverse md:grid grid-cols-2 relative ' + style()}>
@@ -96,7 +104,7 @@ function Hero(props) {
                     <h2 className='text-2xl md:text-4xl text-white uppercase'>I am a</h2>
                     <p className='text-4xl md:text-6xl text-white uppercase'>{saying}</p>
                     <div className='flex gap-3 mt-auto'>
-                        <button className='bg-accent text-white'>Contact Me</button>
+                        <button className='bg-accent text-white' onClick={contactMeHandler}>Contact Me</button>
                         <button className='bg-white hover:bg-white'>Resume</button>
                     </div>
                 </div>

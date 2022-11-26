@@ -113,7 +113,7 @@ function ContactMe() {
     const formView = () => {
         if (messageStatus === 'ready') {
             return (
-                <form onSubmit={formHandler}>
+                <form onSubmit={formHandler} method="post">
                     <div className="mb-3 flex flex-col md:flex-row gap-3">
                         <div className='flex flex-col w-full gap-1'>
                             <input onChange={inputHandler} value={formInfo.fName.content} type="text" name="fName" id="fName" placeholder='First Name' />
