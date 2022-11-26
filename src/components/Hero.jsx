@@ -19,13 +19,13 @@ function Hero(props) {
     const [saying, setSaying] = useState('')
     const [currentWord, setCurrentWord] = useState(allSayings[0])
     const [showing, setShowing] = useState(true)
-    const [currentSpeed, setCurrentSpeed] = useState(250)
+    const [currentSpeed, setCurrentSpeed] = useState(0)
     const [showingControls, setShowingControls] = useState(false)
 
     useEffect(() => {
         if (showing) {
             let delay = 0
-            if (saying.length >= currentWord.length) delay = 1000
+            if (saying.length >= currentWord.length) delay = 1000 + currentSpeed
 
             setTimeout(() => {
                 let nextChar = currentWord[saying.length]
@@ -52,7 +52,7 @@ function Hero(props) {
 
     const style = () => {
         if (windowPos > 100) {
-            return 'mx-3 md:mx-10 mt-44 rounded-xl shadow-xl shadow-black/75 duration-700 pt-24'
+            return 'mx-3 md:mx-10 mt-48 rounded-xl shadow-xl shadow-black/75 duration-700 pt-24'
         } else {
             return 'h-screen'
         }
@@ -60,7 +60,7 @@ function Hero(props) {
 
 
     return (
-        <div className={' bg-secondary-light flex flex-col-reverse md:grid grid-cols-2 relative ' + style()}>
+        <div className={'bg-secondary-light flex flex-col-reverse md:grid grid-cols-2 relative ' + style()}>
             <div className='h-full w-full flex justify-left items-end'>
                 <img src={HalfNHalf} alt="me" className='w-[50em]' />
             </div>
@@ -87,8 +87,8 @@ function Hero(props) {
                                 }
                                 <img className='w-9 cursor-pointer' src={Forward} alt="forward" onClick={() => updateSpeedHandler(-50)} />
                             </div>
-                                <label className='text-white' htmlFor="currentSpeedInput">Speed</label>
-                                <input className='rounded-full text-center w-fit' type="number" name="currentSpeedInput" id="currentSpeedInput" value={currentSpeed} onChange={(e) => setCurrentSpeed(e.target.value)} />
+                            <label className='text-white' htmlFor="currentSpeedInput">Speed</label>
+                            <input className='rounded-full text-center w-fit' type="number" name="currentSpeedInput" id="currentSpeedInput" value={currentSpeed} onChange={(e) => setCurrentSpeed(e.target.value)} />
                         </div>
                     }
                 </div>

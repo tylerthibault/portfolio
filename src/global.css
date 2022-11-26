@@ -1,7 +1,46 @@
-button, .btn {
+
+/* ************* BUTTONS ************* */
+button,
+.btn {
     @apply border shadow rounded-full px-5;
 }
 
-button:hover, .btn:hover {
+button:hover,
+.btn:hover {
     @apply bg-secondary-light duration-300;
+}
+
+/* ************* INPUTS ************* */
+input, .input {
+    @apply rounded-lg text-center;
+}
+
+
+
+/* ************* SIDE SCROLLBAR ************* */
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.01em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-accent rounded-full;
+    border: 1px solid black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.text-stroke-hover:hover {
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+
 }
