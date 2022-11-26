@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import emailjs from '@emailjs/browser';
 
 function ContactMe() {
-    const [messageStatus, setMessageStatus] = useState('sent')
+    const [messageStatus, setMessageStatus] = useState('ready')
     const [formInfo, setFormInfo] = useState({
         fName: {
             content: '',
