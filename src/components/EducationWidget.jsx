@@ -21,7 +21,7 @@ function EducationWidget() {
                                 return (
                                     <div key={'edu' + idx} className='md:absolute md:-translate-x-[100%] md:w-3/4 p-5 bg-blue-200 rounded-xl shadow-md shadow-black h-full overflow-auto duration-500'>
                                         <div className="grid grid-cols-3 h-full gap-5 place-items-center">
-                                            <div className='col-span-full md:col-span-1 bg-black h-full w-full flex justify-center items-center rounded-xl'>
+                                            <div className='col-span-full md:col-span-1 bg-black h-full w-full flex justify-center items-center rounded-xl p-3'>
                                                 <img src={edu[activeEdu].logo} alt={edu[activeEdu].logoAlt} />
                                             </div>
                                             <div className="col-span-full md:col-span-2 flex flex-col gap-3">

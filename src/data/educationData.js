@@ -1,4 +1,8 @@
 import CodingDojo from '../img/codingdojo.png'
+import Bulldogs from '../img/bulldogs.png'
+import Corban from '../img/corban.png'
+import UPH from '../img/UPH.png'
+import UW from '../img/UW.png'
 
 const edu = [
     {
@@ -6,7 +10,7 @@ const edu = [
         abv: "UW",
         content: "I attended UW after I finished my first bootcamp at Coding Dojo. UW was a great experience because it allowed me to focus on the REACT framework which quickly became my favorite frontend framework after my MERN stack experience. It was a slower paced bootcamp compared to the hyper fast timeline the Coding Dojo offers. This slower pace really allowed for more exploration into the REACT suite. React, like python, has found a special place in my life.",
         dates: 'Dec 2020 - March 2021',
-        logo: "",
+        logo: UW,
         logoAlt: "logo alt"
     },
     {
@@ -20,25 +24,26 @@ const edu = [
     {
         title: "Corban University",
         abv: "Corban University",
-        content: "...corban info",
+        content: "My time at Corban is linked with my time at Universitas Pelita Harapan (UPH). Corban University had a program in place with UPH, where you could attend the UPH and gain a deploma from Corban University. UPH's curriculum had to be up to the same standards as Corban as well as some of Corban's instructors went to UPH and taught.",
         dates: '2014 - 2017',
-        logo: "",
-        logoAlt: "logo alt"
+        logo: Corban,
+        logoAlt: "logo alt",
+        notes: ""
     },
     {
         title: "Universitas Pelita Harapan",
         abv: "UPH",
-        content: "...corban info",
+        content: "...UPH info coming soon.",
         dates: '2014 - 2017',
-        logo: "",
+        logo: UPH,
         logoAlt: "logo alt"
     },
     {
         title: "Cashmere High School",
         abv: "Cashmere High School",
-        content: "...cashmere high school info",
+        content: "...cashmere high school info coming soon.",
         dates: '2004 - 2008',
-        logo: "",
+        logo: Bulldogs,
         logoAlt: "logo alt"
     },
 ]
