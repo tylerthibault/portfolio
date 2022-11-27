@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import SectionHeader from './SectionHeader'
 
-import TechData from '../data/techData'
+import TechData from '../../data/techData'
 
 function TechnologyWidget() {
     const [currentTechCategory, setCurrentTechCategory] = useState('languages')

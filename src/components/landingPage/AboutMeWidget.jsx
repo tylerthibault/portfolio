@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionHeader from './SectionHeader'
 
-import KNT from '../img/kendalAndI.png'
+import KNT from '../../img/kendalAndI.png'
 
 function AboutMeWidget() {
     return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SectionHeader from './SectionHeader'
 
-import EducationData from '../data/educationData'
+import EducationData from '../../data/educationData'
 
 function EducationWidget() {
     const [edu, setEdu] = useState(EducationData.edu)

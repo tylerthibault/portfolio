@@ -1,10 +1,10 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
-import HalfNHalf from '../img/halfnhalf.png'
-import Play from '../img/svg/play.svg'
-import Pause from '../img/svg/pause.svg'
-import Forward from '../img/svg/forward.svg'
-import Backward from '../img/svg/backward.svg'
+import HalfNHalf from '../../img/halfnhalf.png'
+import Play from '../../img/svg/play.svg'
+import Pause from '../../img/svg/pause.svg'
+import Forward from '../../img/svg/forward.svg'
+import Backward from '../../img/svg/backward.svg'
 
 function Hero(props) {
     const { windowPos } = props

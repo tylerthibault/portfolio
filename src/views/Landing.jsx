@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import AboutMeWidget from '../components/AboutMeWidget'
-import ContactMe from '../components/ContactMe'
-import EducationWidget from '../components/EducationWidget'
+import AboutMeWidget from '../components/landingPage/AboutMeWidget'
+import ContactMe from '../components/landingPage/ContactMe'
+import EducationWidget from '../components/landingPage/EducationWidget'
 import Footer from '../components/Footer'
-import Hero from '../components/Hero'
-import Lorem from '../components/Lorem'
-import Navbar from '../components/Navbar'
-import ProjectWidget from '../components/ProjectWidget'
-import TechnologyWidget from '../components/TechnologyWidget'
-import WorkhistoryWidget from '../components/WorkhistoryWidget'
+import Hero from '../components/landingPage/Hero'
+import Lorem from '../components/landingPage/Lorem'
+import Navbar from '../components/landingPage/Navbar'
+import ProjectWidget from '../components/landingPage/ProjectWidget'
+import TechnologyWidget from '../components/landingPage/TechnologyWidget'
+import WorkhistoryWidget from '../components/landingPage/WorkhistoryWidget'
 
 function Landing() {
   const [windowPos, setWindowPos] = useState(0)

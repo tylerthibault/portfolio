@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SectionHeader from './SectionHeader'
 
-import workHistory from '../data/workhistoryData'
+import workHistory from '../../data/workhistoryData'
 
 function WorkhistoryWidget() {
     const [work, setWork] = useState(workHistory.workHistory)
